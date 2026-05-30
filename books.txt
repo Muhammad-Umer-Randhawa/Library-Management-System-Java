@@ -1,0 +1,30 @@
+ID | Title | Author | Genre | Total Copies | Available Copies
+1 | ABC | HENRY | KIDS | 300 | 300
+2 | Harry Potter | J.K Rowling | Supernatural | 400 | 400
+101 | C Programming | John Doe | Programming | 50 | 50
+102 | Java Programming | Jane Smith | Programming | 75 | 75
+103 | Python Programming | Michael Brown | Programming | 60 | 60
+104 | Data Structures | Emily Davis | Computer Science | 45 | 45
+105 | Algorithms | David Wilson | Computer Science | 40 | 40
+201 | Calculus | Sarah Johnson | Mathematics | 35 | 35
+202 | Linear Algebra | Robert Martinez | Mathematics | 30 | 30
+203 | Statistics | Linda Garcia | Mathematics | 25 | 25
+204 | Physics | James Rodriguez | Science | 55 | 55
+205 | Chemistry | Patricia Lopez | Science | 50 | 50
+206 | Biology | Michael Hernandez | Science | 45 | 45
+301 | World History | Susan King | History | 20 | 20
+302 | American History | Thomas Wright | History | 18 | 18
+303 | European History | Nancy Lee | History | 15 | 15
+401 | English Literature | Daniel Scott | Literature | 22 | 22
+402 | Shakespeare | Lisa Green | Literature | 19 | 19
+403 | Poetry | Charles Adams | Literature | 17 | 17
+501 | Psychology | Sandra Baker | Social Sciences | 12 | 12
+502 | Sociology | George Nelson | Social Sciences | 10 | 10
+503 | Economics | Barbara Carter | Social Sciences | 14 | 14
+601 | Health and Fitness | Betty Mitchell | Health | 28 | 28
+602 | Nutrition | Kevin Roberts | Health | 23 | 23
+603 | First Aid | Betty Thompson | Health | 21 | 21
+701 | Gardening | George White | Hobbies | 16 | 16
+702 | Photography | Margaret Harris | Hobbies | 14 | 14
+703 | Cooking | Ronald Clark | Hobbies | 12 | 12
+1 | ABC | Henry | Kids | 200 | 200
