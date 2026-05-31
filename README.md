@@ -185,24 +185,5 @@ Login successful
 
 ---
 
-## 🤝 Contributing
 
-This was a semester project, but feel free to fork and improve it! Some ideas:
 
-- [ ] Add a database backend (MySQL / SQLite)
-- [ ] Implement a GUI with JavaFX or Swing
-- [ ] Add fine calculation for overdue books
-- [ ] Password hashing for better security
-- [ ] Book search by author or genre
-
----
-
-## 📄 License
-
-This project is open source and available for educational purposes.
-
----
-
-<p align="center">
-  Built with ☕ Java — 2nd Semester End-of-Semester Project
-</p>
