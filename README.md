@@ -92,7 +92,7 @@ Library-Management-System/
 | `admin`  | `admin123` |
 
 ---
-# 🎨 UI
+### 🎨 UI
 The System features a simple console-based program consisting of a classic ASCII character display for the main **Library Management System** interface, along with the text based dashboard enabling user to login as admin, user, or registring a new user or to even exit the program.
 ---
 ## 📖 How It Works
