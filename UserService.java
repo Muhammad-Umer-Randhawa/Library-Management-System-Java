@@ -163,7 +163,7 @@ public class UserService {
         System.out.println("Book not found.");
     }
 
-    public void myIssuedBooks() { // to see the issued books
+    public void myIssuedBooks() {
         System.out.println(
                 "------------------------------------------------------------------------------------------------------");
         System.out.printf("%-10s | %-30s | %-15s | %-15s%n", "Book ID", "Title", "Issue Date", "Due Date");
