@@ -2,15 +2,6 @@
 
 A console-based **Library Management System** built in Java as an end-of-semester project (2nd Semester). The application provides role-based access for **Admins** and **Users** to manage books, issue/return operations, and user accounts — all persisted through flat-file storage.
 
-```
- ██╗     ██╗██████╗ ██████╗  █████╗ ██████╗ ██╗   ██╗
- ██║     ██║██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝
- ██║     ██║██████╔╝██████╔╝███████║██████╔╝ ╚████╔╝
- ██║     ██║██╔══██╗██╔══██╗██╔══██║██╔══██╗  ╚██╔╝
- ███████╗██║██████╔╝██║  ██║██║  ██║██║  ██║   ██║
- ╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
-```
-
 ---
 
 ## ✨ Features
@@ -46,18 +37,18 @@ A console-based **Library Management System** built in Java as an end-of-semeste
 ```
 Library-Management-System/
 │
-├── Main.java            # Entry point — handles login/register flow
-├── AuthService.java     # Authentication logic (login, register, password change)
-├── AdminService.java    # Admin dashboard and admin-specific operations
-├── UserService.java     # User dashboard and user-specific operations
-├── Book.java            # Book model — fields, getters/setters, borrow/return logic
-├── User.java            # User model — fields, getters/setters, issued book tracking
-├── IssueRecord.java     # Issue record model — tracks borrow/return transactions
-├── FileHandler.java     # File I/O — loads and saves data to/from .txt files
+|--- Main.java            # Entry point — handles login/register flow
+|--- AuthService.java     # Authentication logic (login, register, password change)
+|--- AdminService.java    # Admin dashboard and admin-specific operations
+|--- UserService.java     # User dashboard and user-specific operations
+|--- Book.java            # Book model — fields, getters/setters, borrow/return logic
+|--- User.java            # User model — fields, getters/setters, issued book tracking
+|--- IssueRecord.java     # Issue record model — tracks borrow/return transactions
+|--- FileHandler.java     # File I/O — loads and saves data to/from .txt files
 │
-├── books.txt            # Book inventory data
-├── users.txt            # User account data
-└── issue.txt            # Book issue/return records
+|--- books.txt            # Book inventory data
+|--- users.txt            # User account data
+|--- issue.txt            # Book issue/return records
 ```
 
 ---
@@ -101,22 +92,27 @@ Library-Management-System/
 | `admin`  | `admin123` |
 
 ---
+### 🎨 UI
+The System features a simple console-based program consisting of a classic ASCII character display for the main **Library Management System** interface, along with the text based dashboard enabling user to login as admin, user, or registring a new user or to even exit the program.
+
+---
 
 ## 📖 How It Works
 
 ### Data Flow
 ```
-┌──────────┐     ┌──────────────┐     ┌──────────────┐
++----------+     +--------------+     +--------------+
 │  Main    │---->│ AuthService  │---->│  FileHandler │
 │ (Entry)  │     │ (Auth Logic) │     │  (File I/O)  │
-└──────────┘     └──────────────┘     └──────────────┘
++----------+     +--------------+     +--------------+
       │                                      │
       │                                      │
-┌──────────────┐                    ┌──────────────────┐
+      V                                      V
++--------------+                    +------------------+
 │ AdminService │                    │  books.txt       │
 │ UserService  │<------------------>|  users.txt       │
 │ (Dashboards) │                    │  issue.txt       │
-└──────────────┘                    └──────────────────┘
++--------------+                    +------------------+
 ```
 
 1. **Startup** — `Main.java` loads all data from `.txt` files into memory via `FileHandler`
@@ -184,25 +180,3 @@ Login successful
 - **Java Text Blocks** — Multi-line strings for menus (Java 15+ feature)
 
 ---
-
-## 🤝 Contributing
-
-This was a semester project, but feel free to fork and improve it! Some ideas:
-
-- [ ] Add a database backend (MySQL / SQLite)
-- [ ] Implement a GUI with JavaFX or Swing
-- [ ] Add fine calculation for overdue books
-- [ ] Password hashing for better security
-- [ ] Book search by author or genre
-
----
-
-## 📄 License
-
-This project is open source and available for educational purposes.
-
----
-
-<p align="center">
-  Built with ☕ Java — 2nd Semester End-of-Semester Project
-</p>
