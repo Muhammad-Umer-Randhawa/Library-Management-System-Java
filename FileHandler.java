@@ -7,7 +7,7 @@ import java.io.IOException;
 public class FileHandler {
 
     public static void saveBooks(ArrayList<Book> books) {
-        try (FileWriter writer = new FileWriter("books.txt")) {
+        try (FileWriter writer = new FileWriter("books.txt")) { // try with resources
             writer.write("ID | Title | Author | Genre | Total Copies | Available Copies\n");
             for (Book book : books) {
                 writer.write(book.getID() + " | " + book.getTitle() + " | " + book.getAuthor() + " | " + book.getGenre()
