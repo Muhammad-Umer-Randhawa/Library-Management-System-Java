@@ -48,7 +48,7 @@ public class FileHandler {
                         Book book = new Book(id, title, author, genre, totalCopies);
                         book.setAvailableCopies(availableCopies);
                     } catch (NumberFormatException e) {
-                        // Skip invalid lines
+                        System.out.println("Error parsing book data: " + e.getMessage());
                     }
                 }
             }
@@ -104,7 +104,6 @@ public class FileHandler {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 5) {
-                    // Legacy format without bookName
                     int userId = Integer.parseInt(parts[0].trim());
                     int bookId = Integer.parseInt(parts[1].trim());
                     String bookName = "Unknown";
@@ -116,7 +115,6 @@ public class FileHandler {
                         record.setReturned(true);
                     }
                 } else if (parts.length >= 6) {
-                    // New format with bookName
                     int userId = Integer.parseInt(parts[0].trim());
                     int bookId = Integer.parseInt(parts[1].trim());
                     String bookName = parts[2].trim();

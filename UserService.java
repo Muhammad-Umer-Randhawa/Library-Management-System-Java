@@ -27,7 +27,7 @@ public class UserService {
                 """);
         System.out.print("Enter your choice: ");
         int choice = sc.nextInt();
-        sc.nextLine(); // Consume newline left-over
+        sc.nextLine();
         switch (choice) {
             case 1:
                 browseAllBooks();
@@ -99,7 +99,7 @@ public class UserService {
                 if (book.getAvailableCopies() > 0) {
                     book.borrowBook();
                     String issueDate = LocalDate.now().toString();
-                    String dueDate = LocalDate.now().plusDays(14).toString(); // 14 days borrow period
+                    String dueDate = LocalDate.now().plusDays(14).toString();
 
                     if (user == null) {
                         System.out.println("Error: User not logged in.");
@@ -132,7 +132,6 @@ public class UserService {
             if (book.getTitle().equalsIgnoreCase(name)) {
                 System.out.println(book);
 
-                // Check if there is an active issue record for this user and book
                 boolean recordFound = false;
                 for (IssueRecord record : IssueRecord.getRecordList()) {
                     if (record.getUserId() == user.getID() && record.getBookId() == book.getID()
@@ -152,7 +151,8 @@ public class UserService {
                 if (book.getAvailableCopies() < book.getTotalCopies()) {
                     book.returnBook();
                 } else {
-                    System.out.println("Warning: All copies of this book are already in the library, but updating your issue record anyway.");
+                    System.out.println(
+                            "Warning: All copies of this book are already in the library, but updating your issue record anyway.");
                 }
                 FileHandler.saveBooks(Book.getBookList());
                 FileHandler.saveIssueRecords(IssueRecord.getRecordList());
